@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FEStartupControlSample", "FEStartupControlSample\FEStartupControlSample.csproj", "{EE604FEC-A844-4BD7-A734-DC4B443AC9E1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FEStartupControl", "..\FEStartupControl\FEStartupControl\FEStartupControl.csproj", "{C42ABFF8-11DD-4428-9C36-FE2CB05DD47B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE604FEC-A844-4BD7-A734-DC4B443AC9E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE604FEC-A844-4BD7-A734-DC4B443AC9E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE604FEC-A844-4BD7-A734-DC4B443AC9E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE604FEC-A844-4BD7-A734-DC4B443AC9E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C42ABFF8-11DD-4428-9C36-FE2CB05DD47B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C42ABFF8-11DD-4428-9C36-FE2CB05DD47B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C42ABFF8-11DD-4428-9C36-FE2CB05DD47B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C42ABFF8-11DD-4428-9C36-FE2CB05DD47B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {68C1892A-2AB7-44F4-9689-346C2A69E44B}
+	EndGlobalSection
+EndGlobal

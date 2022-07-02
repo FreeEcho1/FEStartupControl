@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="FEStartupControl">
+      <HintPath>..\..\FEStartupControl\FEStartupControl\bin\Debug\net6.0\FEStartupControl.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
