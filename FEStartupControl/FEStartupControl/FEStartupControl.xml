@@ -1,0 +1,396 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FEStartupControl</name>
+    </assembly>
+    <members>
+        <member name="T:FreeEcho.FEStartupControl.ChangeEffectiveStateStartupException">
+            <summary>
+            スタートアップの有効状態変更に失敗した例外
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEStartupControl.ChangeEffectiveStateStartupException.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="T:FreeEcho.FEStartupControl.DeleteStartupException">
+            <summary>
+            スタートアップの削除に失敗した例外
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEStartupControl.DeleteStartupException.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="T:FreeEcho.FEStartupControl.RegisterStartupException">
+            <summary>
+            スタートアップに登録が失敗した例外
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEStartupControl.RegisterStartupException.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="T:FreeEcho.FEStartupControl.RegistryHivePath">
+            <summary>
+            レジストリの最上位ノードとパス
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEStartupControl.RegistryHivePath.RegistryHive">
+            <summary>
+            最上位ノード
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEStartupControl.RegistryHivePath.Path">
+            <summary>
+            パス
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEStartupControl.RegistryHivePath.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEStartupControl.RegistryHivePath.#ctor(Microsoft.Win32.RegistryHive,System.String)">
+            <summary>
+            コンストラクタ
+            </summary>
+            <param name="registryHive">最上位ノード</param>
+            <param name="path">パス</param>
+        </member>
+        <member name="T:FreeEcho.FEStartupControl.StartupControl">
+            <summary>
+            スタートアップ管理
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEStartupControl.StartupControl.GetRegisterStartup">
+            <summary>
+            登録されているスタートアップを取得
+            </summary>
+            <returns>スタートアップ情報</returns>
+        </member>
+        <member name="M:FreeEcho.FEStartupControl.StartupControl.GetRegisterStartup(System.Collections.Generic.List{FreeEcho.FEStartupControl.StartupInformation}@)">
+            <summary>
+            登録されているスタートアップを取得
+            </summary>
+            <param name="startupInformation">スタートアップ情報</param>
+        </member>
+        <member name="M:FreeEcho.FEStartupControl.StartupControl.GetFolderStartup(System.Collections.Generic.List{FreeEcho.FEStartupControl.StartupInformation}@)">
+            <summary>
+            フォルダに登録されているスタートアップを取得
+            </summary>
+            <param name="startupInformation">スタートアップ情報</param>
+        </member>
+        <member name="M:FreeEcho.FEStartupControl.StartupControl.GetDesignationFolder(System.Collections.Generic.List{FreeEcho.FEStartupControl.StartupInformation}@,FreeEcho.FEStartupControl.StartupRegisterPlace,System.String)">
+            <summary>
+            指定したフォルダに登録されているスタートアップを取得
+            </summary>
+            <param name="startupInformation">スタートアップ情報</param>
+            <param name="startupRegisterPlace">登録情報</param>
+            <param name="startupFolderPath">パス</param>
+        </member>
+        <member name="M:FreeEcho.FEStartupControl.StartupControl.GetRegistryStartup(System.Collections.Generic.List{FreeEcho.FEStartupControl.StartupInformation}@)">
+            <summary>
+            レジストリに登録されているスタートアップを取得
+            </summary>
+            <param name="startupInformation">スタートアップ情報</param>
+        </member>
+        <member name="M:FreeEcho.FEStartupControl.StartupControl.GetDesignationRegistry(System.Collections.Generic.List{FreeEcho.FEStartupControl.StartupInformation}@,FreeEcho.FEStartupControl.StartupRegisterPlace,FreeEcho.FEStartupControl.RegistryHivePath)">
+            <summary>
+            指定したレジストリに登録されているスタートアップを取得
+            </summary>
+            <param name="startupInformation">スタートアップ情報</param>
+            <param name="startupRegisterPlace">登録場所</param>
+            <param name="registryHivePath">RegistryHivePath</param>
+        </member>
+        <member name="M:FreeEcho.FEStartupControl.StartupControl.GetCancelStartup(System.Collections.Generic.List{FreeEcho.FEStartupControl.StartupInformation}@)">
+            <summary>
+            キャンセルされているスタートアップを取得
+            </summary>
+            <param name="startupInformation">スタートアップ情報</param>
+        </member>
+        <member name="M:FreeEcho.FEStartupControl.StartupControl.GetDesignationCancelStartup(System.Collections.Generic.List{FreeEcho.FEStartupControl.StartupInformation}@,FreeEcho.FEStartupControl.StartupRegisterPlace,FreeEcho.FEStartupControl.RegistryHivePath)">
+            <summary>
+            指定した登録場所でキャンセルされているスタートアップを取得
+            </summary>
+            <param name="startupInformation">スタートアップ情報</param>
+            <param name="registerPlace">登録場所</param>
+            <param name="registryHivePath">RegistryHivePath</param>
+        </member>
+        <member name="M:FreeEcho.FEStartupControl.StartupControl.RegisterStartup(FreeEcho.FEStartupControl.StartupRegisterPlace,System.String,System.String,System.String,FreeEcho.FEStartupControl.WindowState,System.String)">
+            <summary>
+            スタートアップに登録
+            </summary>
+            <param name="startupRegisterPlace">登録場所</param>
+            <param name="registerName">登録名</param>
+            <param name="filePath">ファイルパス</param>
+            <param name="parameter">パラメータ</param>
+            <param name="windowState">ウィンドウの状態</param>
+            <param name="workingDirectory">作業ディレクトリ</param>
+            <exception cref="T:FreeEcho.FEStartupControl.RegisterStartupException"></exception>
+        </member>
+        <member name="M:FreeEcho.FEStartupControl.StartupControl.RegisterStartup(System.Collections.Generic.List{FreeEcho.FEStartupControl.StartupInformation}@,FreeEcho.FEStartupControl.StartupRegisterPlace,System.String,System.String,System.String,FreeEcho.FEStartupControl.WindowState,System.String)">
+            <summary>
+            スタートアップに登録
+            </summary>
+            <param name="startupInformation">スタートアップ情報</param>
+            <param name="startupRegisterPlace">登録場所</param>
+            <param name="registerName">登録名</param>
+            <param name="filePath">ファイルパス</param>
+            <param name="parameter">パラメータ</param>
+            <param name="windowState">ウィンドウの状態</param>
+            <param name="workingDirectory">作業ディレクトリ</param>
+            <exception cref="T:FreeEcho.FEStartupControl.RegisterStartupException"></exception>
+        </member>
+        <member name="M:FreeEcho.FEStartupControl.StartupControl.RegisterFolder(FreeEcho.FEStartupControl.StartupRegisterPlace,System.String,System.String,System.String,FreeEcho.FEStartupControl.WindowState,System.String)">
+            <summary>
+            フォルダに登録
+            </summary>
+            <param name="startupRegisterPlace">スタートアップの登録場所</param>
+            <param name="registerName">登録名</param>
+            <param name="filePath">ファイルパス</param>
+            <param name="parameter">パラメータ</param>
+            <param name="windowState">ウィンドウの状態</param>
+            <param name="workingDirectory">作業ディレクトリ</param>
+        </member>
+        <member name="M:FreeEcho.FEStartupControl.StartupControl.RegisterRegistry(FreeEcho.FEStartupControl.StartupRegisterPlace,System.String,System.String,System.String)">
+            <summary>
+            レジストリに登録
+            </summary>
+            <param name="startupRegisterPlace">スタートアップの登録場所</param>
+            <param name="registerName">登録名</param>
+            <param name="filePath">ファイルパス</param>
+            <param name="parameter">パラメータ</param>
+        </member>
+        <member name="M:FreeEcho.FEStartupControl.StartupControl.DeleteStartup(FreeEcho.FEStartupControl.StartupRegisterPlace,System.String)">
+            <summary>
+            スタートアップを削除
+            </summary>
+            <param name="startupRegisterPlace">登録場所</param>
+            <param name="registerName">登録名</param>
+            <exception cref="T:FreeEcho.FEStartupControl.DeleteStartupException"></exception>
+        </member>
+        <member name="M:FreeEcho.FEStartupControl.StartupControl.DeleteStartup(System.Collections.Generic.List{FreeEcho.FEStartupControl.StartupInformation}@,FreeEcho.FEStartupControl.StartupRegisterPlace,System.String)">
+            <summary>
+            スタートアップを削除
+            </summary>
+            <param name="startupInformation">スタートアップ情報</param>
+            <param name="startupRegisterPlace">登録場所</param>
+            <param name="registerName">登録名</param>
+            <exception cref="T:FreeEcho.FEStartupControl.DeleteStartupException"></exception>
+        </member>
+        <member name="M:FreeEcho.FEStartupControl.StartupControl.ChangeEffectiveState(FreeEcho.FEStartupControl.StartupRegisterPlace,System.String,System.Boolean)">
+            <summary>
+            スタートアップの有効状態を変更
+            </summary>
+            <param name="startupRegisterPlace">スタートアップの登録場所</param>
+            <param name="registerName">登録名</param>
+            <param name="effectiveState">有効状態</param>
+            <exception cref="T:FreeEcho.FEStartupControl.ChangeEffectiveStateStartupException">ChangeEffectiveStateStartupException</exception>
+        </member>
+        <member name="M:FreeEcho.FEStartupControl.StartupControl.SeparateFullPathParameter(System.String,System.String@,System.String@)">
+            <summary>
+            ファイルパスとパラメータを分ける
+            </summary>
+            <param name="stringData">文字列</param>
+            <param name="filePath">ファイルパス</param>
+            <param name="parameter">パラメータ</param>
+        </member>
+        <member name="T:FreeEcho.FEStartupControl.StartupInformation">
+            <summary>
+            スタートアップ情報
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEStartupControl.StartupInformation.RegisterPlace">
+            <summary>
+            登録場所
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEStartupControl.StartupInformation.RegisterName">
+            <summary>
+            登録名
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEStartupControl.StartupInformation.Path">
+            <summary>
+            パス
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEStartupControl.StartupInformation.Parameter">
+            <summary>
+            パラメータ
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEStartupControl.StartupInformation.WindowState">
+            <summary>
+            ウィンドウの状態
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEStartupControl.StartupInformation.WorkingDirectory">
+            <summary>
+            作業ディレクトリ
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEStartupControl.StartupInformation.RegisterState">
+            <summary>
+            登録状態 (false=無効/true=有効)
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEStartupControl.StartupInformation.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:FreeEcho.FEStartupControl.StartupInformation.#ctor(FreeEcho.FEStartupControl.StartupRegisterPlace,System.String,System.String,System.String,FreeEcho.FEStartupControl.WindowState,System.String,System.Boolean)">
+            <summary>
+            コンストラクタ
+            </summary>
+            <param name="register_place">スタートアップの登録場所</param>
+            <param name="register_name">登録名</param>
+            <param name="path">パス</param>
+            <param name="parameter">パラメータ</param>
+            <param name="window_state">ウィンドウの状態</param>
+            <param name="working_directory">作業ディレクトリ</param>
+            <param name="register_state">登録状態</param>
+        </member>
+        <member name="T:FreeEcho.FEStartupControl.StartupRegisterPlace">
+            <summary>
+            スタートアップの登録場所
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEStartupControl.StartupRegisterPlace.FolderLogonUser">
+            <summary>
+            startup folder (logon user) (C:\Users\(user name)\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup)
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEStartupControl.StartupRegisterPlace.FolderAllUser">
+            <summary>
+            startup folder (all user) (C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp)
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEStartupControl.StartupRegisterPlace.RegistryLogonUser">
+            <summary>
+            registry (logon user) (HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Run)
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEStartupControl.StartupRegisterPlace.RegistryLogonUserOnce">
+            <summary>
+            registry (logon user, once) (HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce)
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEStartupControl.StartupRegisterPlace.RegistryAllUser">
+            <summary>
+            registry (all user) (HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run)
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEStartupControl.StartupRegisterPlace.RegistryAllUserOnce">
+            <summary>
+            registry (all user, once) (HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce)
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEStartupControl.StartupRegisterPlace.RegistryAllUser32Bit">
+            <summary>
+            registry (all user, 32 bit) (64 bit OS only) (HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Run)
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEStartupControl.StartupRegisterPlace.RegistryAllUserOnce32Bit">
+            <summary>
+            registry (all user, once, 32 bit) (64 bit OS only) (HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\RunOnce)
+            </summary>
+        </member>
+        <member name="T:FreeEcho.FEStartupControl.StartupRegistryHidePath">
+            <summary>
+            スタートアップのレジストリの最上位ノードとパス
+            </summary>
+        </member>
+        <member name="P:FreeEcho.FEStartupControl.StartupRegistryHidePath.LogonUser">
+            <summary>
+            logon user
+            </summary>
+            <returns>RegistryHivePath</returns>
+        </member>
+        <member name="P:FreeEcho.FEStartupControl.StartupRegistryHidePath.LogonUserOnce">
+            <summary>
+            logon user (once)
+            </summary>
+            <returns>RegistryHivePath</returns>
+        </member>
+        <member name="P:FreeEcho.FEStartupControl.StartupRegistryHidePath.AllUser">
+            <summary>
+            all user
+            </summary>
+            <returns>RegistryHivePath</returns>
+        </member>
+        <member name="P:FreeEcho.FEStartupControl.StartupRegistryHidePath.AllUserOnce">
+            <summary>
+            all user (once)
+            </summary>
+            <returns>RegistryHivePath</returns>
+        </member>
+        <member name="P:FreeEcho.FEStartupControl.StartupRegistryHidePath.AllUser32Bit">
+            <summary>
+            all user (32 bit)
+            </summary>
+            <returns>RegistryHivePath</returns>
+        </member>
+        <member name="P:FreeEcho.FEStartupControl.StartupRegistryHidePath.AllUserOnce32Bit">
+            <summary>
+            all user (once、32 bit)
+            </summary>
+            <returns>RegistryHivePath</returns>
+        </member>
+        <member name="P:FreeEcho.FEStartupControl.StartupRegistryHidePath.DisabledFolderLogonUser">
+            <summary>
+            logon user folder (無効化されたスタートアップ)
+            </summary>
+            <returns>RegistryHivePath</returns>
+        </member>
+        <member name="P:FreeEcho.FEStartupControl.StartupRegistryHidePath.DisabledFolderAllUser">
+            <summary>
+            all user folder (無効化されたスタートアップ)
+            </summary>
+            <returns>RegistryHivePath</returns>
+        </member>
+        <member name="P:FreeEcho.FEStartupControl.StartupRegistryHidePath.DisabledRegistryLogonUser">
+            <summary>
+            logon user registry (無効化されたスタートアップ)
+            </summary>
+            <returns>RegistryHivePath</returns>
+        </member>
+        <member name="P:FreeEcho.FEStartupControl.StartupRegistryHidePath.DisabledRegistryAllUser">
+            <summary>
+            all user registry (無効化されたスタートアップ)
+            </summary>
+            <returns>RegistryHivePath</returns>
+        </member>
+        <member name="P:FreeEcho.FEStartupControl.StartupRegistryHidePath.DisabledRegistryAllUser32Bit">
+            <summary>
+            all user registry (32 bit) (無効化されたスタートアップ)
+            </summary>
+            <returns>RegistryHivePath</returns>
+        </member>
+        <member name="T:FreeEcho.FEStartupControl.WindowState">
+            <summary>
+            ウィンドウの状態
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEStartupControl.WindowState.Normal">
+            <summary>
+            通常のサイズ
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEStartupControl.WindowState.Minimized">
+            <summary>
+            最小化
+            </summary>
+        </member>
+        <member name="F:FreeEcho.FEStartupControl.WindowState.Maximized">
+            <summary>
+            最大化
+            </summary>
+        </member>
+    </members>
+</doc>
